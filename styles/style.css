@@ -1,0 +1,28 @@
+:root{
+    --primary: crimson;
+}
+nav {
+    box-shadow: 1px 5px 3px -5px rgba(0,0,0,02);
+}
+.nav-content{
+    max-width: 1200px;
+    padding:0 30px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content h1{
+    color:var(--primary);
+}
+.nav-content a{
+    text-decoration: none;
+    color:#000;
+    margin:0 2px;
+    font-size: 18px;
+    cursor:pointer;
+}
+.nav-content form input{
+    padding: 2px 5px;
+    font-size: 17px;
+}
