@@ -3,6 +3,28 @@
   <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/nav.ejs') %>
-    <h1>we are ejs </h1>
+    <div class="content">
+      <h2>All Blogs</h2>
+
+      <div class="blogs">
+      <% if(blogs.length > 0){ %>
+
+        <% blogs.forEach(blog=>{ %>
+          <a href="<%= blog._id%>">
+            <h3><%= blog.title%></h3>
+            <h4><%= blog.snippet%></h4>
+          </a>
+       <% })%>
+
+     <% } else{ %>
+        <h2>
+          Sorry we have no blogs...
+        </h2>
+     <% }%>
+      </div>
+
+    </div>
 </body>
 </html>
+
+<!-- .slice(0,50) -->
