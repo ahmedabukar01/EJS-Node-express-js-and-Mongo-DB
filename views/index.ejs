@@ -9,18 +9,18 @@
       <div class="blogs">
       <% if(blogs.length > 0){ %>
 
-        <% blogs.forEach(blog=>{ %>
-          <a href="<%= blog._id%>">
-            <h3><%= blog.title%></h3>
-            <h4><%= blog.snippet%></h4>
-          </a>
-       <% })%>
+          <% blogs.forEach(blog=>{ %>
+            <a href="<%= blog._id%>">
+              <h3><%= blog.title%></h3>
+              <h4><%= blog.snippet%></h4>
+            </a>
+        <% })%>
 
-     <% } else{ %>
-        <h2>
-          Sorry we have no blogs...
-        </h2>
-     <% }%>
+      <% } else{ %>
+          <h2>
+            Sorry we have no blogs...
+          </h2>
+        <% }%>
       </div>
 
     </div>

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Blogs = require('./backend/blogSchema');
-
+const blogControll = require('./backend/controllers');
 const blogRoutes = require('./backend/routes');
 
 // middleware
@@ -25,5 +25,4 @@ app.get('/',(req,res)=>{
     res.redirect('/blogs')
 })
 
-
-
+app.get('/about',blogControll.about_blog);

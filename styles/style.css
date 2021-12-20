@@ -45,3 +45,11 @@ nav {
     margin-bottom: 10px;
     width:400px;
 }
+
+/* about  */
+.center{
+    max-width: 800px;
+    margin:auto;
+    padding:10px;
+    text-align: center;
+}

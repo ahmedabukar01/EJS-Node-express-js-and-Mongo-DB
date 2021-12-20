@@ -1,6 +1,7 @@
 
 const Blogs = require('./blogSchema');
 
+// get blogs
 const get_blogs = (req,res)=>{
     Blogs.find()
     .then(result=>{
@@ -9,6 +10,12 @@ const get_blogs = (req,res)=>{
     .catch(err=>console.log(err))
 }
 
+//
+const about_blog = (req,res)=>{
+    res.render('about',{title:'About US'});
+}
+
 module.exports = {
-    get_blogs
+    get_blogs,
+    about_blog
 }
