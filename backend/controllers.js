@@ -10,12 +10,18 @@ const get_blogs = (req,res)=>{
     .catch(err=>console.log(err))
 }
 
-//
+// about
 const about_blog = (req,res)=>{
     res.render('about',{title:'About US'});
 }
 
+// create blog
+const create_blog = (req,res)=>{
+    res.render('create_blog',{title: 'Create New Blog',});
+}
+
 module.exports = {
     get_blogs,
-    about_blog
+    about_blog,
+    create_blog
 }
