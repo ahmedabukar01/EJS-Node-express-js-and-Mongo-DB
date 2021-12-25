@@ -4,6 +4,10 @@
 nav {
     box-shadow: 1px 5px 3px -5px rgba(0,0,0,02);
 }
+body{
+    background:#333;
+    color:#fff;
+}
 .nav-content{
     max-width: 1200px;
     padding:0 30px;
@@ -38,8 +42,9 @@ nav {
 }
 .blogs a{
     text-decoration: none;
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
-    color:#000;
+    box-shadow: 1px 3px 5px rgba(255,255,255,0.2);
+    color:#fff;
+    background:#333;
     display:block;
     padding:10px;
     margin-bottom: 10px;
@@ -64,10 +69,27 @@ form{
     border:none;
     font-size: 17px;
     margin: 9px 0;
-    padding:8px 5px;
     resize: none;
     border: 1px solid gainsboro;
 }
+input{
+    padding:8px 5px;
+}
 textarea{
     min-height: 200px;
+}
+button{
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 14px;
+    border:1px solid #fff;
+    transition: 0.3s all ease;
+    font-size: 17px;
+    border-radius: 8px;
+}
+button:hover{
+    background:transparent;
+    color:var(--primary);
+    border-color: var(--primary);
 }

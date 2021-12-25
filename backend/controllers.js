@@ -19,9 +19,14 @@ const about_blog = (req,res)=>{
 const create_blog = (req,res)=>{
     res.render('create_blog',{title: 'Create New Blog',});
 }
-
+// create post blog
+const create_post_blog = (req,res)=>{
+    console.log(req.body);
+}
+// exports
 module.exports = {
     get_blogs,
     about_blog,
-    create_blog
+    create_blog,
+    create_post_blog
 }

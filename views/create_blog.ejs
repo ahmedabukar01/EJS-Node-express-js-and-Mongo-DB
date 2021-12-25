@@ -5,12 +5,15 @@
     <%- include('./partials/nav.ejs') %>
     <div class="center">
         <h2>Create New Blog</h2>
-        <form>
-            <input class="text" type="text" name="name" placeholder="Name">
-            <input class="text" type="text" name="snippet" placeholder="snippet">
-            <textarea class="text" placeholder="body" name="body">
+        <form action="/blogs" method="POST">
+            <input class="text" type="text" id="title" name="title" placeholder="Name" required>
+            <input class="text" type="text" id="snippit" name="snippet" placeholder="snippet" required>
+            <textarea class="text" placeholder="body" id="body" name="body" required>
             </textarea>
+            <button>Create Post</button>
         </form>
     </div>
+
+    <script src="../frontend/app.js"></script>
 </body>
 </html>
