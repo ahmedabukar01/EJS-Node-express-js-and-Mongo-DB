@@ -26,8 +26,26 @@ app.get('/',(req,res)=>{
     res.redirect('/blogs')
 })
 
-app.post('/blogs',(req,res)=>{
-    console.log(req.body)
-})
 
 app.get('/about',blogControll.about_blog);
+
+// create blog post
+app.post('/blogs', (req,res)=>{
+    console.log('welcome')
+    const newBlog = new Blogs(req.body);
+    newBlog.save()
+    .then(result=>{
+        console.log('data has been saved...')
+        res.send(result)
+
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+    
+})
+
+// error
+app.use((req,res)=>{
+    res.render('404',{title: '404 not found'});
+})
